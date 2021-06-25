@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/25 15:01:03 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/25 15:05:30 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ void		replace(std::string const &filename, std::string const &to_find, std::stri
 		throw (2);
 	else if (to_replace.length() == 0)
 		throw (3);
-	file.open(filename);
+	file.open(filename.c_str());
 	if (file.is_open() == 0)
 		throw (4);
-	output.open(((char *)(filename + ".replace"), std::ios::trunc);
+	output.open(((filename + ".replace").c_str(), std::ios::trunc);
 	if (output.is_open() == 0)
 		throw (5);
 	while (std::getline(file, line))
