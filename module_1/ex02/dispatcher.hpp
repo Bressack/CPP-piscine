@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/03 12:38:42 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/25 14:57:48 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/25 14:58:11 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 # include <time.h>
 # include <stdlib.h>
-# include <cstdlib>
+// # include <cstdlib>
 // project
 # include <Zombie.class.hpp>
 # include <ZombieEvent.class.hpp>
