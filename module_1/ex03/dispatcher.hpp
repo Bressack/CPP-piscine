@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 14:22:48 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/16 14:12:40 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/25 14:59:00 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include <iostream>
 # include <string>
 # include <time.h>
+# include <stdlib.h>
 // project
 # include <Zombie.class.hpp>
 # include <ZombieHorde.class.hpp>
