@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 12:49:03 by tharchen          #+#    #+#             */
-/*   Updated: 2021/05/26 22:36:15 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/28 15:40:16 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CONTACT_CLASS_HPP
 # include <string>
 # define MAX_SIZE		255
-# define SIZE_PHONEBOOK	10
+# define SIZE_PHONEBOOK	8
 class Contact
 {
 	public:
