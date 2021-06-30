@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/30 15:08:01 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/30 16:06:18 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Phonebook::Phonebook(void)  // constructor
 {
-	std::cout << "CONSTRUCTOR PHONEBOOK" << std::endl;
 	this->nb_entry = 0;
 	this->_exemple[0] = Contact("Pierre"   , "Trump"   , "La roulette", "0667354618", "blackholded");
 	this->_exemple[1] = Contact("Lucie"    , "Martin"  , "Rapide"     , "0618945317", "rich");
