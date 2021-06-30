@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 04:04:37 by tharchen          #+#    #+#             */
-/*   Updated: 2021/05/27 04:05:03 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/30 16:25:24 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,14 @@
 
 int		main(void)
 {
+	std::cout << "------------------------------------------" << std::endl;
+	std::cout << "------------ ponyOnTheStack --------------" << std::endl;
+	std::cout << "------------------------------------------" << std::endl << std::endl;
 	ponyOnTheStack();
+
+	std::cout << std::endl << "------------------------------------------" << std::endl;
+	std::cout << "------------ ponyOnTheHeap ---------------" << std::endl;
+	std::cout << "------------------------------------------" << std::endl << std::endl;
 	ponyOnTheHeap();
 	return (0);
 }

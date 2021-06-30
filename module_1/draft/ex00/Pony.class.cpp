@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/27 03:34:29 by tharchen          #+#    #+#             */
-/*   Updated: 2021/05/27 04:19:13 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/30 16:23:55 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ponyOnTheStack(void)
 	std::cout << pony.get_name() << " enter the chat" << std::endl;
 	std::cout << "Humm, hello.. there is no clouds today..." << std::endl;
 	std::cout << "My name is " << pony.get_name() << std::endl;
-	std::cout << "I am a(n)" << pony.get_type() << " :) " << std::endl;
+	std::cout << "I am a(n) " << pony.get_type() << " :) " << std::endl;
 	std::cout << "Humm yes, my skin is blue but my tail is " << pony.get_color() << " !" << std::endl;
 	return ;
 }
@@ -42,7 +42,7 @@ void	ponyOnTheHeap(void)
 	std::cout << pony->get_name() << " enter the chat" << std::endl;
 	std::cout << "Hey ! Hey ! Hey ! What a wonderfull day !!!" << std::endl;
 	std::cout << "My name is " << pony->get_name()  << " !!!" << std::endl;
-	std::cout << "I am a(n)" <<  pony->get_type() << " :) " << std::endl;
+	std::cout << "I am a(n) " <<  pony->get_type() << " :) " << std::endl;
 	std::cout << "Yes yes yes !! I\'m " << pony->get_color() << " ! i love this color" << std::endl;
 	delete pony;
 	return ;
