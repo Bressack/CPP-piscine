@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
-#    Updated: 2021/06/30 14:06:23 by tharchen         ###   ########.fr        #
+#    Updated: 2021/06/30 16:07:53 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ $(SRCS_LIST):
 clean:
 	@ rm -rf $(OBJS_DIR)
 
-fclean:
+fclean: clean
 	@ rm -rf $(NAME) $(NAME).dSYM
 
 re: fclean all
