@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.ovop.class.cpp                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 20:59:39 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/25 17:20:22 by tharchen         ###   ########.fr       */
+/*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
+/*   Updated: 2021/06/30 15:05:27 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
-# include <Contact.class.hpp>
-# include <sstream>
-# include <iostream>
-# include <fstream>
-# include <iomanip>
-# include <string>
-# include <time.h>
-void	new_contact(Contact *phonebook, int *nb_contact);
-#endif
+#include <dispatcher.hpp>
+
+// Contact		&Contact::operator=(Contact const &rhs)
+// {
+// 	*this = rhs;
+// 	return (*this);
+// }
+
+std::ostream	&operator<<(std::ostream &o, Contact const &i)
+{
+	(void)i;
+	return (o);
+}
