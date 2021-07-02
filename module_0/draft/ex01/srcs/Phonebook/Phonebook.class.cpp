@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/30 15:54:35 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/06/30 18:32:40 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,15 @@ void	Phonebook::search(void)
 		Contact::print_column_names();
 		for (size_t i = 0; i < this->nb_entry && i < SIZE_PHONEBOOK; i++)
 			this->_contacts[i].print_short(i);
-		choosen = get_number_from_entry(0, min((int)this->nb_entry, (int)SIZE_PHONEBOOK) - 1, "enter index");
-		this->_contacts[choosen].print();
+		while (1)
+		{
+			choosen = get_number_from_entry(0, min((int)this->nb_entry, (int)SIZE_PHONEBOOK) - 1, "enter index");
+			if (choosen >= 0 && choosen <= min((int)this->nb_entry, (int)SIZE_PHONEBOOK) - 1)
+			{
+				this->_contacts[choosen].print();
+				break ;
+			}
+		}
 	}
 }
 
