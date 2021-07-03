@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:00:46 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/03 19:44:55 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/03 20:33:48 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # include <iomanip>
 # include <string>
 # include <time.h>
+# include <stdlib.h>
 //!!CLASSES_INCLUDES
 # include <ClapTrap.class.hpp>
 # include <ScavTrap.class.hpp>
