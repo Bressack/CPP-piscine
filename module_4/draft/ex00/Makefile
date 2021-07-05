@@ -6,11 +6,11 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
-#    Updated: 2021/07/04 17:19:33 by tharchen         ###   ########.fr        #
+#    Updated: 2021/07/04 17:19:48 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME					=	zombies
+NAME					=	poly
 CC						=	clang++
 
 # FLAGS					=	-Wall -Wextra -Werror -std=c++98 -Ofast
@@ -24,17 +24,31 @@ OBJS_DIR				=	objs/
 
 # !!SRCS_LIST_CLASSES
 
-SRCS_ZOMBIE			=	\
-							Zombie/Zombie.class.cpp \
-							Zombie/Zombie.cd.class.cpp \
-							Zombie/Zombie.gs.class.cpp \
-							Zombie/Zombie.ovop.class.cpp \
+SRCS_PEON			=	\
+							Peon/Peon.class.cpp \
+							Peon/Peon.cd.class.cpp \
+							Peon/Peon.gs.class.cpp \
+							Peon/Peon.ovop.class.cpp \
+
+SRCS_VICTIM			=	\
+							Victim/Victim.class.cpp \
+							Victim/Victim.cd.class.cpp \
+							Victim/Victim.gs.class.cpp \
+							Victim/Victim.ovop.class.cpp \
+
+SRCS_SORCERER			=	\
+							Sorcerer/Sorcerer.class.cpp \
+							Sorcerer/Sorcerer.cd.class.cpp \
+							Sorcerer/Sorcerer.gs.class.cpp \
+							Sorcerer/Sorcerer.ovop.class.cpp \
 
 # !!SRCS_LIST_OTHERS
 
 SRCS_LIST				=	\
 							main.cpp \
-							$(SRCS_ZOMBIE) \
+							$(SRCS_PEON) \
+							$(SRCS_VICTIM) \
+							$(SRCS_SORCERER) \
 
 all: $(NAME)
 

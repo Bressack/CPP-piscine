@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.cpp                                           :+:      :+:    :+:   */
+/*   class_pattern_ovop.cpp                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/27 04:22:07 by tharchen          #+#    #+#             */
-/*   Updated: 2021/05/27 17:19:59 by tharchen         ###   ########.fr       */
+/*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
+/*   Updated: 2021/07/04 16:30:45 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include <dispatcher.hpp>
 
-void memoryLeak()
+Zombie		&Zombie::operator=(Zombie const &rhs)
 {
-	std::string* panthere = new std::string("String panthere leaks");
+	(void)rhs;
+	return (*this);
+}
 
-	std::cout << *panthere << std::endl;
-	delete panthere;
+std::ostream	&operator<<(std::ostream &o, Zombie const &i)
+{
+	(void)i;
+	return (o);
 }

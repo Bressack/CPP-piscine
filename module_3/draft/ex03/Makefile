@@ -6,11 +6,11 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
-#    Updated: 2021/07/04 17:19:33 by tharchen         ###   ########.fr        #
+#    Updated: 2021/07/04 12:36:44 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME					=	zombies
+NAME					=	arena
 CC						=	clang++
 
 # FLAGS					=	-Wall -Wextra -Werror -std=c++98 -Ofast
@@ -24,17 +24,38 @@ OBJS_DIR				=	objs/
 
 # !!SRCS_LIST_CLASSES
 
-SRCS_ZOMBIE			=	\
-							Zombie/Zombie.class.cpp \
-							Zombie/Zombie.cd.class.cpp \
-							Zombie/Zombie.gs.class.cpp \
-							Zombie/Zombie.ovop.class.cpp \
+SRCS_DIAMONDTRAP		=	\
+							DiamondTrap/DiamondTrap.class.cpp \
+							DiamondTrap/DiamondTrap.cd.class.cpp \
+							DiamondTrap/DiamondTrap.gs.class.cpp \
+							DiamondTrap/DiamondTrap.ovop.class.cpp \
+
+SRCS_FRAGTRAP			=	\
+							FragTrap/FragTrap.class.cpp \
+							FragTrap/FragTrap.cd.class.cpp \
+							FragTrap/FragTrap.gs.class.cpp \
+							FragTrap/FragTrap.ovop.class.cpp \
+
+SRCS_SCAVTRAP			=	\
+							ScavTrap/ScavTrap.class.cpp \
+							ScavTrap/ScavTrap.cd.class.cpp \
+							ScavTrap/ScavTrap.gs.class.cpp \
+							ScavTrap/ScavTrap.ovop.class.cpp \
+
+SRCS_CLAPTRAP			=	\
+							ClapTrap/ClapTrap.class.cpp \
+							ClapTrap/ClapTrap.cd.class.cpp \
+							ClapTrap/ClapTrap.gs.class.cpp \
+							ClapTrap/ClapTrap.ovop.class.cpp \
 
 # !!SRCS_LIST_OTHERS
 
 SRCS_LIST				=	\
 							main.cpp \
-							$(SRCS_ZOMBIE) \
+							$(SRCS_DIAMONDTRAP) \
+							$(SRCS_FRAGTRAP) \
+							$(SRCS_SCAVTRAP) \
+							$(SRCS_CLAPTRAP) \
 
 all: $(NAME)
 
@@ -48,7 +69,7 @@ $(SRCS_LIST):
 	@ printf "\033[31m Program \033[32m%s : \033[34mCompilation of \033[36m%-30s\033[0m\r" $(NAME) $(notdir $@)
 
 clean:
-	@ rm -rf $(OBJS_DIR)
+	@ rm -rfd $(OBJS_DIR)
 
 fclean: clean
 	@ rm -rf $(NAME) $(NAME).dSYM
