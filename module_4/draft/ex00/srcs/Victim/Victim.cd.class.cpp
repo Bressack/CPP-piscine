@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/04 17:17:00 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/05 12:42:30 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Victim::Victim(void)  // constructor
 {
-
+	
 }
 
 Victim::Victim(std::string name):  // constructor

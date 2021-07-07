@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   class_pattern.hpp                                  :+:      :+:    :+:   */
+/*   Peon.class.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:33:57 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/21 19:00:09 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/05 13:42:40 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PEON_CLASS_HPP
 # include <dispatcher.hpp>
 
-class Peon
+class Peon : virtual public Victim
 {
 	protected:
 		// PROTECTED MEMBERS ATRIBUTE : PROMA
@@ -29,6 +29,7 @@ class Peon
 	public:
 		// CONSTRUCTOR / DESTRUCTOR : CD
 		Peon(void);  // constructor
+		Peon(std::string name); // constructor
 		Peon(const Peon &src);  // constructor by copy
 		virtual ~Peon(void); // destructor
 		// OVERLOADED OPERATORS : OVOP

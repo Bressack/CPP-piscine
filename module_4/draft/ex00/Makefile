@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
-#    Updated: 2021/07/04 17:19:48 by tharchen         ###   ########.fr        #
+#    Updated: 2021/07/05 16:21:56 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,13 +50,13 @@ SRCS_LIST				=	\
 							$(SRCS_VICTIM) \
 							$(SRCS_SORCERER) \
 
-all: $(NAME)
+all: $(SRCS_LIST) $(NAME)
 
-$(NAME): $(SRCS_LIST)
+$(NAME):
 	@ $(CC) $(FLAGS) $(addprefix $(OBJS_DIR), $(SRCS_LIST:.cpp=.o)) -I $(INCLUDES) -o $(NAME)
 	@ printf "\033[31m Program \033[32m%s : \033[34mCompilation \033[36m%-30s\033[0m\n" $(NAME) "done !"
 
-$(SRCS_LIST):
+$(SRCS_LIST): $(OBJS_DIR)
 	@ mkdir -p $(dir $(addprefix $(OBJS_DIR), $(@:.cpp=.o)))
 	@ $(CC) $(FLAGS) $(addprefix $(SRCS_DIR), $@) -I $(INCLUDES) -c -o $(addprefix $(OBJS_DIR), $(@:.cpp=.o))
 	@ printf "\033[31m Program \033[32m%s : \033[34mCompilation of \033[36m%-30s\033[0m\r" $(NAME) $(notdir $@)

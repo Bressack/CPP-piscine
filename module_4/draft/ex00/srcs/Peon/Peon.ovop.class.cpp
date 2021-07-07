@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/04 16:31:59 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:16:33 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ Peon		&Peon::operator=(Peon const &rhs)
 
 std::ostream	&operator<<(std::ostream &o, Peon const &i)
 {
-	(void)i;
+	o	<< "I'm "
+		<< i.get__name()
+		<< " and I like otters!";
 	return (o);
 }

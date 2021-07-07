@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:33:57 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/04 17:18:59 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/05 13:42:14 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ class Victim
 		// PUBLIC MEMBERS ATRIBUTE : PUMA
 
 		// PUBLIC MEMBERS FUNCTION : PUMF
+		void getPolymorphed(void) const;
 
 };
 
