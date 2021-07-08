@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/01 13:59:45 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/08 08:20:04 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 Fixed		&Fixed::operator=(Fixed const &rhs)
 {
-	if (this != &rhs)
-		this->_value = rhs.getRawBits();
+	this->setRawBits(rhs.getRawBits());
 	return (*this);
 }
 

@@ -6,13 +6,11 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/01 13:14:40 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/08 08:02:09 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <dispatcher.hpp>
-
-int	const	Fixed::_num = 8;
 
 // PROTECTED MEMBERS FUNCTION : PROMF
 

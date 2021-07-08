@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:33:57 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/01 13:15:59 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/08 08:06:30 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Fixed
 	private:
 		// PRIVATE MEMBERS ATRIBUTE : PRIMA
 		int					_value;
-		static	int	const	_num;
+		static const int	_num = 8;
 		// PRIVATE MEMBERS FUNCTION : PRIMF
 
 	public:
