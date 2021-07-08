@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/08 11:49:10 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/08 12:01:36 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,11 +93,11 @@ Fixed			&Fixed::operator++(void) // ++var
 	return (*this);
 }
 
-Fixed			&Fixed::operator++(int) // var++
+Fixed			Fixed::operator++(int) // var++
 {
-	Fixed		*cpy = new Fixed(*this);
+	Fixed	cpy(*this);
 	operator++();
-	return (*cpy);
+	return (cpy);
 }
 
 Fixed			&Fixed::operator--(void)
@@ -106,11 +106,11 @@ Fixed			&Fixed::operator--(void)
 	return (*this);
 }
 
-Fixed			&Fixed::operator--(int)
+Fixed			Fixed::operator--(int)
 {
-	Fixed		*cpy = new Fixed(*this);
+	Fixed	cpy(*this);
 	operator--();
-	return (*cpy);
+	return (cpy);
 }
 
 Fixed	&Fixed::min(Fixed &l, Fixed &rhs)

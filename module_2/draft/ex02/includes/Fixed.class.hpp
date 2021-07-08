@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:33:57 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/02 18:21:40 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/08 12:01:02 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ class Fixed
 		bool	operator!=(const Fixed &rhs);
 
 		Fixed	&operator++(void);
-		Fixed	&operator++(int);
+		Fixed	operator++(int);
 		Fixed	&operator--(void);
-		Fixed	&operator--(int);
+		Fixed	operator--(int);
 		// GETTERS / SETTERS : GS
 		// PUBLIC MEMBERS ATRIBUTE : PUMA
 

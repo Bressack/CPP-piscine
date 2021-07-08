@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/08 11:51:29 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/08 11:59:51 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -524,16 +524,13 @@ int		main(void)
 	{
 		{
 			std::cout << "    test int:" << std::endl;
-			Fixed	*a = new Fixed(42);
+			Fixed	a(42);
 
-			std::cout << "        [a  ]: " << (*a)   << std::endl;
-			std::cout << "        [a++]: " << (*a)++ << std::endl;
-			// delete a;
-			std::cout << "        [a  ]: " << (*a)   << std::endl;
-			std::cout << "        [a++]: " << (*a)++ << std::endl;
-			// delete a;
-			std::cout << "        [a  ]: " << (*a)   << std::endl;
-			delete a;
+			std::cout << "        [a  ]: " << a   << std::endl;
+			std::cout << "        [a++]: " << a++ << std::endl;
+			std::cout << "        [a  ]: " << a   << std::endl;
+			std::cout << "        [a++]: " << a++ << std::endl;
+			std::cout << "        [a  ]: " << a   << std::endl;
 		}
 		{
 			std::cout << "    test float:" << std::endl;
@@ -541,10 +538,8 @@ int		main(void)
 
 			std::cout << "        [a  ]: " << a   << std::endl;
 			std::cout << "        [a++]: " << a++ << std::endl;
-			// delete a;
 			std::cout << "        [a  ]: " << a   << std::endl;
 			std::cout << "        [a++]: " << a++ << std::endl;
-			// delete a;
 			std::cout << "        [a  ]: " << a   << std::endl;
 		}
 	}
