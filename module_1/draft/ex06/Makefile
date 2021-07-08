@@ -6,11 +6,11 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
-#    Updated: 2021/07/07 16:57:56 by tharchen         ###   ########.fr        #
+#    Updated: 2021/07/07 18:40:26 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME					=	karen
+NAME					=	karenFilter
 CC						=	clang++
 
 # FLAGS					=	-Wall -Wextra -Werror -std=c++98 -Ofast

@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/21 19:21:49 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/07 18:27:43 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 //// private _type
 
-std::string	Weapon::get__type(void) const
+const std::string	&Weapon::get__type(void) const
 {
 	return (this->_type);
 }

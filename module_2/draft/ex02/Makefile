@@ -15,6 +15,7 @@ CC						=	clang++
 
 # FLAGS					=	-Wall -Wextra -Werror -std=c++98 -Ofast
 FLAGS					=	-Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
+#FLAGS					=	-std=c++98 -g3 -fsanitize=address
 
 INCLUDES				=	includes/
 

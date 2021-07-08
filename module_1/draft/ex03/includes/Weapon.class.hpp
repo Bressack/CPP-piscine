@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:33:57 by tharchen          #+#    #+#             */
-/*   Updated: 2021/06/21 19:21:07 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/07 18:27:56 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Weapon
 		Weapon	&operator=(const Weapon &rhs);
 		// GETTERS / SETTERS : GS
 		void						set__type(std::string _type);
-		std::string					get__type(void) const;
+		const std::string		&	get__type(void) const;
 		// PUBLIC MEMBERS ATRIBUTE : PUMA
 
 		// PUBLIC MEMBERS FUNCTION : PUMF
