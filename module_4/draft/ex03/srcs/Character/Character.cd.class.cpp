@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/09 21:02:50 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 21:05:45 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Character::Character(Character const &src)  // constructor by copy
 {
 	this->_name = src.get__name();
 	for (int i = 0; i < 4; i++)
-		this->_inventory[i] = src.get__inventory_cell(i);
+		this->_inventory[i] = src.get__inventory_cell(i)->clone();
 	std::cout
 		<< __FUNCTION__
 		<< " copy constructor called !"
