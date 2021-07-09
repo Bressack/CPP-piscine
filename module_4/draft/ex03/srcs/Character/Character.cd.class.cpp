@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/09 21:07:19 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 21:08:03 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ Character::Character(Character const &src)  // constructor by copy
 	{
 		if (src.get__inventory_cell(i))
 			this->_inventory[i] = src.get__inventory_cell(i)->clone();
+		else
+			this->_inventory[i] = NULL;
 	}
 	std::cout
 		<< __FUNCTION__
