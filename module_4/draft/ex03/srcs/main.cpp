@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/09 21:08:42 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 21:16:37 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 int main()
 {
-	// {
-	// 	IMateriaSource		* src = new MateriaSource();
-	// 	ICharacter			* bob = new Character("bob");
-	// 	ICharacter			* me = new Character("me");
-	// 	AMateria			* tmp;
-	//
-	// 	src->learnMateria(new Ice());
-	// 	src->learnMateria(new Cure());
-	//
-	// 	tmp = src->createMateria("ice");
-	// 	me->equip(tmp);
-	// 	tmp = src->createMateria("cure");
-	// 	me->equip(tmp);
-	//
-	// 	me->use(0, *bob);
-	// 	me->use(1, *bob);
-	//
-	// 	delete bob;
-	// 	delete me;
-	// 	delete src;
-	//
-	// }
+	{
+		IMateriaSource		* src = new MateriaSource();
+		ICharacter			* bob = new Character("bob");
+		ICharacter			* me = new Character("me");
+		AMateria			* tmp;
+
+		src->learnMateria(new Ice());
+		src->learnMateria(new Cure());
+
+		tmp = src->createMateria("ice");
+		me->equip(tmp);
+		tmp = src->createMateria("cure");
+		me->equip(tmp);
+
+		me->use(0, *bob);
+		me->use(1, *bob);
+
+		delete bob;
+		delete me;
+		delete src;
+
+	}
 	{
 		std::cout << "______________________________ MY MAIN ______________________________" << std::endl;
 		std::cout << "_____________________ Create new Characters _____________________" << std::endl;
