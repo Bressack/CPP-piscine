@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
-#    Updated: 2021/07/09 19:25:48 by tharchen         ###   ########.fr        #
+#    Updated: 2021/07/09 20:57:46 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME					=	materia
 CC						=	clang++
 
 # FLAGS					=	-Wall -Wextra -Werror -std=c++98 -Ofast
-FLAGS					=	-Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
+FLAGS					=	-Wall -Wextra -Werror -std=c++98 -g3
 
 INCLUDES				=	includes/
 
