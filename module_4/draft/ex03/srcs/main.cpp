@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/09 20:56:24 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 20:59:25 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int main()
 		std::cout << *john_src << std::endl;
 		std::cout << *john_dst << std::endl;
 		std::cout << "_____________________ Delete dst and src _____________________" << std::endl;
-		delete john_dst;
 		delete john_src;
+		delete john_dst;
 		std::cout << "_____________________ CHAR DEEP ASSIGNATION _____________________" << std::endl;
 		std::cout << "_____________________ Create kate_src && equip _____________________" << std::endl;
 		Character *kate_src = new Character("Ksrc");
