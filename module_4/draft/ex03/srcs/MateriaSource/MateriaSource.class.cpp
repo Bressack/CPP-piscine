@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/09 20:14:43 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 21:10:27 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,10 @@ void 			MateriaSource::learnMateria(AMateria *m)
 		if (!this->_inventory[i])
 		{
 			this->_inventory[i] = m;
-			break ;
+			return ;
 		}
 	}
+	delete m; // storage full
 }
 
 AMateria* 		MateriaSource::createMateria(std::string const & type)
