@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/09 20:43:12 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 20:55:40 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ MateriaSource::MateriaSource(MateriaSource const &src)  // constructor by copy
 
 MateriaSource::~MateriaSource(void) // destructor
 {
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_inventory[i])
+			delete this->_inventory[i];
+	}
 	std::cout
 		<< &(__FUNCTION__[1])
 		<< " destructor called !"

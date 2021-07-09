@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/09 20:51:16 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 20:54:55 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,24 @@ int main()
 		delete src;
 
 	}
+	{
+		std::cout << "______________________________ SUBJECT MAIN ______________________________" << std::endl;
+		IMateriaSource* src = new MateriaSource();
+		src->learnMateria(new Ice());
+		src->learnMateria(new Cure());
+		ICharacter* me = new Character("me");
+		AMateria* tmp;
+		tmp = src->createMateria("ice");
+		me->equip(tmp);
+		tmp = src->createMateria("cure");
+		me->equip(tmp);
+		ICharacter* bob = new Character("bob");
+		me->use(0, *bob);
+		me->use(1, *bob);
+		delete bob;
+		delete me;
+		delete src;
+    }
 	if (0) {
 		std::cout << "______________________________ MY MAIN ______________________________" << std::endl;
 		std::cout << "_____________________ Create new Characters _____________________" << std::endl;
