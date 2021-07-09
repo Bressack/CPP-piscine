@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/04 12:02:02 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:47:45 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 FragTrap::FragTrap(void)  // constructor
 {
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " built with default constructor!"
 		<< std::endl;
 }
@@ -32,7 +32,7 @@ FragTrap::FragTrap(std::string name)  // constructor
 	this->_hitpoint			= this->get__MAX_HIT_POINT();
 	this->_name				= name;
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " <"
 		<< this->get__name()
 		<< "> built !"
@@ -46,7 +46,7 @@ FragTrap::FragTrap(FragTrap const &src)  // constructor by copy
 	this->set__energy_point(src.get__energy_point());
 	this->set__hitpoint(src.get__hitpoint());
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " <"
 		<< this->get__name()
 		<< "> built by copy of " << src.get__name() << " !"
@@ -56,9 +56,8 @@ FragTrap::FragTrap(FragTrap const &src)  // constructor by copy
 FragTrap::~FragTrap(void) // destructor
 {
 	std::cout
-		<< __FUNCTION__
-		<< " <"
-		<< this->get__name()
-		<< "> destroyed !"
+		<< &(__FUNCTION__[1])
+		<< " <" << this->_name << "> "
+		<< "destroyed !"
 		<< std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/02 20:06:51 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:21:51 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ std::ostream	&operator<<(std::ostream &o, ClapTrap const &i)
 {
 	o
 		<< ROBOT_TYPE
-		<< " <"
-		<< i.get__name()
-		<< "> "
-		<< std::endl;
+		<< " <" << i.get__name() << "> ";
 	return (o);
 }

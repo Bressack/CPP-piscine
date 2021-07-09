@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/03 20:19:09 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:44:06 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,8 @@ ClapTrap::ClapTrap(ClapTrap const &src)  // constructor by copy
 ClapTrap::~ClapTrap(void) // destructor
 {
 	std::cout
-		<< __FUNCTION__
-		<< " <"
-		<< this->_name
-		<< "> destroyed !"
+		<< &(__FUNCTION__[1])
+		<< " <" << this->_name << "> "
+		<< "destroyed !"
 		<< std::endl;
 }

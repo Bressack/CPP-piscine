@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/03 20:19:09 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:25:54 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap(void)  // constructor
 	this->_energy_point		= this->_MAX_ENERGY_POINT;
 	this->_hitpoint			= this->_MAX_HIT_POINT;
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " built with default constructor!"
 		<< std::endl;
 }
@@ -40,10 +40,9 @@ ClapTrap::ClapTrap(std::string name)  // constructor
 	this->_energy_point		= this->_MAX_ENERGY_POINT;
 	this->_hitpoint			= this->_MAX_HIT_POINT;
 	std::cout
-		<< this->_ROBOT_TYPE
-		<< " <"
-		<< this->_name
-		<< "> built !"
+		<< __FUNCTION__
+		<< " <" << this->_name << "> "
+		<< "built !"
 		<< std::endl;
 }
 
@@ -54,19 +53,17 @@ ClapTrap::ClapTrap(ClapTrap const &src)  // constructor by copy
 	this->_energy_point = src.get__energy_point();
 	this->_hitpoint = src.get__hitpoint();
 	std::cout
-		<< this->_ROBOT_TYPE
-		<< " <"
-		<< this->_name
-		<< "> built by copy of " << src.get__name() << " !"
+		<< __FUNCTION__
+		<< " <" << this->_name << "> "
+		<< "built by copy of " << src.get__name() << " !"
 		<< std::endl;
 }
 
 ClapTrap::~ClapTrap(void) // destructor
 {
 	std::cout
-		<< __FUNCTION__
-		<< " <"
-		<< this->_name
-		<< "> destroyed !"
+		<< &(__FUNCTION__[1])
+		<< " <" << this->_name << "> "
+		<< "destroyed !"
 		<< std::endl;
 }

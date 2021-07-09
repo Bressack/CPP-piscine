@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/04 12:02:09 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:47:50 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ScavTrap::ScavTrap(void)  // constructor
 {
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " built with default constructor!"
 		<< std::endl;
 }
@@ -32,7 +32,7 @@ ScavTrap::ScavTrap(std::string name)  // constructor
 	this->_hitpoint			= this->get__MAX_HIT_POINT();
 	this->_name				= name;
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " <"
 		<< this->get__name()
 		<< "> built !"
@@ -46,7 +46,7 @@ ScavTrap::ScavTrap(ScavTrap const &src)  // constructor by copy
 	this->set__energy_point(src.get__energy_point());
 	this->set__hitpoint(src.get__hitpoint());
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " <"
 		<< this->get__name()
 		<< "> built by copy of " << src.get__name() << " !"
@@ -56,9 +56,8 @@ ScavTrap::ScavTrap(ScavTrap const &src)  // constructor by copy
 ScavTrap::~ScavTrap(void) // destructor
 {
 	std::cout
-		<< __FUNCTION__
-		<< " <"
-		<< this->get__name()
-		<< "> destroyed !"
+		<< &(__FUNCTION__[1])
+		<< " <" << this->_name << "> "
+		<< "destroyed !"
 		<< std::endl;
 }

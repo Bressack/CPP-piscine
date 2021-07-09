@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/03 20:27:26 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:44:12 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,8 @@ FragTrap::FragTrap(FragTrap const &src)  // constructor by copy
 FragTrap::~FragTrap(void) // destructor
 {
 	std::cout
-		<< __FUNCTION__
-		<< " <"
-		<< this->get__name()
-		<< "> destroyed !"
+		<< &(__FUNCTION__[1])
+		<< " <" << this->_name << "> "
+		<< "destroyed !"
 		<< std::endl;
 }

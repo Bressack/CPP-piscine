@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:00:46 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/03 20:33:48 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 10:53:43 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,7 @@
 //!!CLASSES_INCLUDES
 # include <ClapTrap.class.hpp>
 # include <ScavTrap.class.hpp>
+// https://stackoverflow.com/a/15775519
+std::string className(const std::string& prettyFunction);
+#define __CLASS_NAME__ className(__PRETTY_FUNCTION__)
 #endif

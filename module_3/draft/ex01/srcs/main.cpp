@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/03 16:32:57 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 11:45:56 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,18 @@
 
 # define NB_CLAP	5
 # define NB_SCAV	5
+
+// https://stackoverflow.com/a/15775519
+std::string className(const std::string& prettyFunction)
+{
+	size_t colons = prettyFunction.find("::");
+	if (colons == std::string::npos)
+		return "::";
+	size_t begin = prettyFunction.substr(0,colons).rfind(" ") + 1;
+	size_t end = colons - begin;
+
+	return prettyFunction.substr(begin,end);
+}
 
 int	ft_rand(int b)
 {
@@ -109,3 +121,4 @@ int		main(void)
 	}
 	return (0);
 }
+

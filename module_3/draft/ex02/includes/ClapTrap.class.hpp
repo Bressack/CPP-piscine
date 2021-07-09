@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:33:57 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/03 19:57:06 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 10:33:32 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ class ClapTrap
 		// PUBLIC MEMBERS FUNCTION : PUMF
 		void						be_repaired(unsigned int amount) ;
 		void						take_damage(unsigned int amount) ;
-		void						attack(std::string const target);
+		void						attack(std::string const & target);
 
 		static int					fight(ClapTrap & attacker, ClapTrap & defender);
 		static void					repair(ClapTrap & clap);

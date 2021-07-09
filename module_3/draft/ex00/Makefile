@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
-#    Updated: 2021/06/30 16:08:04 by tharchen         ###   ########.fr        #
+#    Updated: 2021/07/09 10:32:04 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,4 +53,5 @@ clean:
 fclean: clean
 	@ rm -rf $(NAME) $(NAME).dSYM
 
-re: fclean all
+re: fclean
+	@ make -j

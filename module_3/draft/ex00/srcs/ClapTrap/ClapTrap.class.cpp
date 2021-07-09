@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/02 21:04:36 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:22:15 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@
 void	ClapTrap::be_repaired(unsigned int amount)
 {
 	std::cout
-		<< this->_name
+		<< ROBOT_TYPE
+		<< " <" << this->_name << "> "
 		<< " repaired from "
 		<< this->_hitpoint
 		<< " to "
@@ -42,7 +43,8 @@ void	ClapTrap::take_damage(unsigned int amount)
 	if (this->_hitpoint > 0)
 	{
 		std::cout
-			<< this->_name
+			<< ROBOT_TYPE
+			<< " <" << this->_name << "> "
 			<< " took "
 			<< amount
 			<< " damage(s). Hit Points: "
@@ -55,7 +57,8 @@ void	ClapTrap::take_damage(unsigned int amount)
 	if (this->_hitpoint <= 0)
 	{
 		std::cout
-			<< this->_name
+			<< ROBOT_TYPE
+			<< " <" << this->_name << "> "
 			<< " is broken. Need to be repaired. Hit Points: "
 			<< this->_hitpoint
 			<< "/"
@@ -64,24 +67,26 @@ void	ClapTrap::take_damage(unsigned int amount)
 	}
 }
 
-void	ClapTrap::attack(std::string const target)
+void	ClapTrap::attack(std::string const & target)
 {
 	if (this->_energy_point < ATTACK_COST)
 	{
 		std::cout
-		<< this->_name
-		<< " fail to attacks "
-		<< target
-		<< ", not enough energy. Need to be repaired."
-		<< std::endl;
+			<< ROBOT_TYPE
+			<< " <" << this->_name << "> "
+			<< " fail to attacks "
+			<< target
+			<< ", not enough energy. Need to be repaired."
+			<< std::endl;
 	}
 	else
 	{
 		std::cout
-		<< this->_name
-		<< " attacks "
-		<< target
-		<< std::endl;
+			<< ROBOT_TYPE
+			<< " <" << this->_name << "> "
+			<< " attacks "
+			<< target
+			<< std::endl;
 		this->_energy_point -= ATTACK_COST;
 	}
 }

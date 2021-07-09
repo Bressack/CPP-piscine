@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/02 20:07:47 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 11:57:05 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap(void)  // constructor
 {
-	std::cout << "WHAT ARE YOU DOING HERE \?\?!!! THIS IS A PRIVATE CONSTRUCTOR !! GET OUT OF THERE !!!!!!" << std::endl;
+
 }
 
 ClapTrap::ClapTrap(std::string name):  // constructor

@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:33:57 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/03 19:57:06 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:22:55 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ class ClapTrap
 {
 	protected:
 		// PROTECTED MEMBERS ATRIBUTE : PROMA
-		std::string					_name;
-		int							_attack_damage;
-		int							_energy_point;
-		int							_hitpoint;
+		std::string			_name;
+		int					_attack_damage;
+		int					_energy_point;
+		int					_hitpoint;
 
 		int					_MAX_HIT_POINT;
 		int					_MAX_ENERGY_POINT;
@@ -66,7 +66,7 @@ class ClapTrap
 		// PUBLIC MEMBERS FUNCTION : PUMF
 		void						be_repaired(unsigned int amount) ;
 		void						take_damage(unsigned int amount) ;
-		void						attack(std::string const target);
+		void						attack(std::string const & target);
 
 		static int					fight(ClapTrap & attacker, ClapTrap & defender);
 		static void					repair(ClapTrap & clap);

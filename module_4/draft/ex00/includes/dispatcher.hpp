@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:00:46 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/05 13:43:30 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 15:29:47 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@
 # include <string>
 # include <time.h>
 //!!CLASSES_INCLUDES
-# include <Victim.class.hpp>
-# include <Peon.class.hpp>
-# include <Sorcerer.class.hpp>
+# include <Animal.class.hpp>
+# include <Cat.class.hpp>
+# include <Dog.class.hpp>
+# include <WrongAnimal.class.hpp>
+# include <WrongCat.class.hpp>
 #endif

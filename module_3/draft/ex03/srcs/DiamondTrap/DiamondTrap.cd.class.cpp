@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 19:36:15 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/04 12:12:58 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 12:47:36 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 DiamondTrap::DiamondTrap(void)  // constructor
 {
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " built with default constructor!"
 		<< std::endl;
 }
@@ -36,7 +36,7 @@ DiamondTrap::DiamondTrap(std::string name)  // constructor
 	this->_name				= name;
 	this->_clapname			= name + "_clap_name";
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " <"
 		<< this->get__name()
 		<< "> built !"
@@ -50,7 +50,7 @@ DiamondTrap::DiamondTrap(DiamondTrap const &src)  // constructor by copy
 	this->set__energy_point(src.get__energy_point());
 	this->set__hitpoint(src.get__hitpoint());
 	std::cout
-		<< this->_ROBOT_TYPE
+		<< __FUNCTION__
 		<< " <"
 		<< this->get__name()
 		<< "> built by copy of " << src.get__name() << " !"
@@ -60,9 +60,8 @@ DiamondTrap::DiamondTrap(DiamondTrap const &src)  // constructor by copy
 DiamondTrap::~DiamondTrap(void) // destructor
 {
 	std::cout
-		<< __FUNCTION__
-		<< " <"
-		<< this->get__name()
-		<< "> destroyed !"
+		<< &(__FUNCTION__[1])
+		<< " <" << this->_name << "> "
+		<< "destroyed !"
 		<< std::endl;
 }

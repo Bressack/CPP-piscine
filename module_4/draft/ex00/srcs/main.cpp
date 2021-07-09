@@ -6,67 +6,45 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/06 13:01:28 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 15:35:00 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <dispatcher.hpp>
 
-void	diamond_title_print(std::string msg)
-{
-	std::cout
-		<< " //////////////////////////  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"
-		<< std::endl
-		<< "||//                     /    \\                        \\\\||"
-		<< std::endl
-		<< "|| "
-		<< msg
-		<<" ||"
-		<< std::endl
-		<< "||\\\\                     \\    /                        //||"
-		<< std::endl
-		<< " \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  /////////////////////////////"
-		<< std::endl;
-}
-
 int		main(void)
 {
-	// subject tests
-	diamond_title_print("                   subject tests                     ");
-	{
-		Sorcerer	robert("Robert", "the Magnificent");
-		Victim		jim("Jimmy");
-		Peon		joe("Joe");
+	std::cout << "<---" << std::endl;
+	const Animal	*meta = new Animal();
+	std::cout << "<---" << std::endl;
+	const Animal	*i = new Cat();
+	std::cout << "<---" << std::endl;
+	const Animal	*j = new Dog();
+	std::cout << "<---" << std::endl;
+	const WrongAnimal	*wa = new WrongAnimal();
+	std::cout << "<---" << std::endl;
+	const WrongAnimal	*wc = new WrongCat();
+	std::cout << "<---" << std::endl;
 
-		std::cout << robert << std::endl;
-		std::cout << jim << std::endl;
-		std::cout << joe << std::endl;
-		robert.polymorph(jim);
-		robert.polymorph(joe);
-	}
-	// subject test Sorcerer constructor/destructor displays
-	diamond_title_print("subject test Sorcerer constructor/destructor displays");
-	{
-		Sorcerer	s1("Hubert", "Bonisseur de la batte");
+	std::cout << i->get__type() << " " << std::endl;
+	std::cout << j->get__type() << " " << std::endl;
+	std::cout << "Sound of Cat         : "; i->makeSound(); // will output the Cat sound!
+	std::cout << "Sound of Dog         : "; j->makeSound(); // will output the Dog sound!
+	std::cout << "Sound of Animal      : "; meta->makeSound(); // will output the Animal sound!
 
-		std::cout << s1 << std::endl;
-	}
-	std::cout << std::endl << std::endl;
-	// subject test Victim constructor/destructor displays
-	diamond_title_print("subject test Victim constructor/destructor displays  ");
-	{
-		Victim		v1("Julie");
+	std::cout << "Sound of WrongAnimal : "; wa->makeSound(); // will output the WrongAnimal sound!
+	std::cout << "Sound of WrongCat    : "; wc->makeSound(); // will output the WrongAnimal sound!
 
-		std::cout << v1 << std::endl;
-	}
-	std::cout << std::endl << std::endl;
-	diamond_title_print("  subject test Sorcerer polymorph Victim displays    ");
-	{
-		Sorcerer	s1("Hubert", "Bonisseur de la batte");
-		Victim		v1("Julie");
-
-		s1.polymorph(v1);
-	}
-
+	std::cout << "<---" << std::endl;
+	delete meta;
+	std::cout << "<---" << std::endl;
+	delete i;
+	std::cout << "<---" << std::endl;
+	delete j;
+	std::cout << "<---" << std::endl;
+	delete wa;
+	std::cout << "<---" << std::endl;
+	delete wc;
+	std::cout << "<---" << std::endl;
 	return (0);
 }
