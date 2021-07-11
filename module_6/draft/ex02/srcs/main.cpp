@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/11 19:13:47 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/11 21:27:31 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ Base *generate(void)
 void identify(Base *p)
 {
 	if (dynamic_cast<A *>(p) != NULL)
-		std::cout << *(dynamic_cast<A *>(p)) << " identified by pointer"
+		std::cout << "A identified by pointer"
 				  << std::endl;
 	else if (dynamic_cast<B *>(p) != NULL)
-		std::cout << *(dynamic_cast<B *>(p)) << " identified by pointer"
+		std::cout << "B identified by pointer"
 				  << std::endl;
 	else if (dynamic_cast<C *>(p) != NULL)
-		std::cout << *(dynamic_cast<C *>(p)) << " identified by pointer"
+		std::cout << "C identified by pointer"
 				  << std::endl;
 	else
 		std::cout << "Couldn't identify class" << std::endl;
@@ -56,7 +56,7 @@ void identify(Base &p)
 	{
 		Base &tmp = dynamic_cast<A &>(p);
 		static_cast<void>(tmp);
-		std::cout << (dynamic_cast<A &>(p)) << " identified by reference"
+		std::cout << "A identified by reference"
 				  << std::endl;
 	} catch (std::exception)
 	{
@@ -66,7 +66,7 @@ void identify(Base &p)
 	{
 		Base &tmp = dynamic_cast<B &>(p);
 		static_cast<void>(tmp);
-		std::cout << (dynamic_cast<B &>(p)) << " identified by reference"
+		std::cout << "B identified by reference"
 				  << std::endl;
 	} catch (std::exception)
 	{
@@ -75,7 +75,7 @@ void identify(Base &p)
 	{
 		Base &tmp = dynamic_cast<C &>(p);
 		static_cast<void>(tmp);
-		std::cout << (dynamic_cast<C &>(p)) << " identified by reference"
+		std::cout << "C identified by reference"
 				  << std::endl;
 	} catch (std::exception)
 	{

@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:00:46 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/11 19:14:34 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/11 21:36:09 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,17 @@
 # define C_RES			"\033[0m"
 # include <sstream>
 # include <iostream>
+# include <ostream>
+# include <istream>
+# include <fstream>
 # include <iomanip>
 # include <string>
-# include <time.h>
+# include <ctime>
+# include <cstdlib>
+# include <cstdio>
 //!!CLASSES_INCLUDES
 # include <Base.class.hpp>
-# include <A.class.hpp>
-# include <B.class.hpp> 
 # include <C.class.hpp>
+# include <B.class.hpp>
+# include <A.class.hpp>
 #endif

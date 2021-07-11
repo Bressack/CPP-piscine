@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
-#    Updated: 2021/07/11 19:14:09 by tharchen         ###   ########.fr        #
+#    Updated: 2021/07/11 21:31:54 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,35 @@ OBJS_DIR				=	objs/
 
 # !!SRCS_LIST_CLASSES
 
+SRCS_BASE		=	\
+							Base/Base.cd.class.cpp \
+
+SRCS_C			=	\
+							C/C.class.cpp \
+							C/C.cd.class.cpp \
+							C/C.gs.class.cpp \
+							C/C.ovop.class.cpp \
+
+SRCS_B			=	\
+							B/B.class.cpp \
+							B/B.cd.class.cpp \
+							B/B.gs.class.cpp \
+							B/B.ovop.class.cpp \
+
+SRCS_A			=	\
+							A/A.class.cpp \
+							A/A.cd.class.cpp \
+							A/A.gs.class.cpp \
+							A/A.ovop.class.cpp \
+
 # !!SRCS_LIST_OTHERS
 
 SRCS_LIST				=	\
 							main.cpp \
+							$(SRCS_BASE) \
+							$(SRCS_C) \
+							$(SRCS_B) \
+							$(SRCS_A) \
 
 all: $(NAME)
 
