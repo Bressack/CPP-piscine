@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/11 21:56:02 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/11 21:56:26 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,6 @@ int main(void)
 	identify(base);
 	identify(*base);
 	if (base)
-		delete base
+		delete base;
 	return (0);
 }
