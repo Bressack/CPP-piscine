@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:00:46 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/11 18:58:23 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/11 21:45:26 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@
 # include <iostream>
 # include <iomanip>
 # include <string>
-# include <time.h>
+# include <cstdint>
+# include <ctime>
+# include <cstdlib>
 # include <Data.hpp>
 //!!CLASSES_INCLUDES
 #endif
