@@ -1,0 +1,85 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
+#    Updated: 2021/07/11 11:40:18 by tharchen         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME					=	inc
+CC						=	clang++
+
+# FLAGS					=	-Wall -Wextra -Werror -std=c++98 -Ofast
+FLAGS					=	-Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
+
+INCLUDES				=	includes/
+
+SRCS_DIR				=	srcs/
+
+OBJS_DIR				=	objs/
+
+# !!SRCS_LIST_CLASSES
+
+SRCS_PRESIDENTIALPARDONFORM			=	\
+							PresidentialPardonForm/PresidentialPardonForm.class.cpp \
+							PresidentialPardonForm/PresidentialPardonForm.cd.class.cpp \
+							PresidentialPardonForm/PresidentialPardonForm.gs.class.cpp \
+							PresidentialPardonForm/PresidentialPardonForm.ovop.class.cpp \
+
+SRCS_ROBOTOMYREQUESTFORM			=	\
+							RobotomyRequestForm/RobotomyRequestForm.class.cpp \
+							RobotomyRequestForm/RobotomyRequestForm.cd.class.cpp \
+							RobotomyRequestForm/RobotomyRequestForm.gs.class.cpp \
+							RobotomyRequestForm/RobotomyRequestForm.ovop.class.cpp \
+
+SRCS_SHRUBBERYCREATIONFORM			=	\
+							ShrubberyCreationForm/ShrubberyCreationForm.class.cpp \
+							ShrubberyCreationForm/ShrubberyCreationForm.cd.class.cpp \
+							ShrubberyCreationForm/ShrubberyCreationForm.gs.class.cpp \
+							ShrubberyCreationForm/ShrubberyCreationForm.ovop.class.cpp \
+
+SRCS_FORM			=	\
+							Form/Form.class.cpp \
+							Form/Form.cd.class.cpp \
+							Form/Form.gs.class.cpp \
+							Form/Form.ovop.class.cpp \
+
+SRCS_BUREAUCRAT			=	\
+							Bureaucrat/Bureaucrat.class.cpp \
+							Bureaucrat/Bureaucrat.cd.class.cpp \
+							Bureaucrat/Bureaucrat.gs.class.cpp \
+							Bureaucrat/Bureaucrat.ovop.class.cpp \
+
+# !!SRCS_LIST_OTHERS
+
+SRCS_LIST				=	\
+							main.cpp \
+							$(SRCS_PRESIDENTIALPARDONFORM) \
+							$(SRCS_ROBOTOMYREQUESTFORM) \
+							$(SRCS_SHRUBBERYCREATIONFORM) \
+							$(SRCS_FORM) \
+							$(SRCS_BUREAUCRAT) \
+
+all: $(NAME)
+
+$(NAME): $(SRCS_LIST)
+	@ $(CC) $(FLAGS) $(addprefix $(OBJS_DIR), $(SRCS_LIST:.cpp=.o)) -I $(INCLUDES) -o $(NAME)
+	@ printf "\033[31m Program \033[32m%s : \033[34mCompilation \033[36m%-50s\033[0m\n" $(NAME) "done !"
+
+$(SRCS_LIST):
+	@ mkdir -p $(dir $(addprefix $(OBJS_DIR), $(@:.cpp=.o)))
+	@ $(CC) $(FLAGS) $(addprefix $(SRCS_DIR), $@) -I $(INCLUDES) -c -o $(addprefix $(OBJS_DIR), $(@:.cpp=.o))
+	@ printf "\033[31m Program \033[32m%s : \033[34mCompilation of \033[36m%-50s\033[0m\r" $(NAME) $(notdir $@)
+
+clean:
+	@ rm -rf $(OBJS_DIR)
+
+fclean: clean
+	@ rm -rf $(NAME) $(NAME).dSYM
+
+re: fclean
+	@ make -j

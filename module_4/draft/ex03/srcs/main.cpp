@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/09 21:16:37 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/09 21:22:41 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int main()
 		std::cout << "_____________________ Create new Characters _____________________" << std::endl;
 		ICharacter* jane = new Character("Jane");
 		ICharacter* creature = new Character("Creature");
+
 		std::cout << "_____________________ CHAR DEEP COPY _____________________" << std::endl;
 		std::cout << "_____________________ Create src && AMateria && equip _____________________" << std::endl;
 		Character* john_src = new Character("John");
@@ -54,6 +55,7 @@ int main()
 		std::cout << "_____________________ Delete dst and src _____________________" << std::endl;
 		delete john_src;
 		delete john_dst;
+
 		std::cout << "_____________________ CHAR DEEP ASSIGNATION _____________________" << std::endl;
 
 		std::cout << "_____________________ Create kate_src && equip _____________________" << std::endl;
