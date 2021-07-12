@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:33:57 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/12 19:05:10 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/12 19:09:19 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ class Array
 		// PRIVATE MEMBERS FUNCTION : PRIMF
 		void	clone_arr(const Array &src)
 		{
-			if (this->_arr != nullptr)
+			if (this->_arr != NULL)
 			{
 				delete[] this->_arr;
-				this->_arr = nullptr;
+				this->_arr = NULL;
 				this->_size = 0;
 			}
 			if (src.get__size() > 0)
@@ -73,7 +73,7 @@ class Array
 		}
 		Array(const Array<T> &src)  // constructor by copy
 		{
-			this->_arr = nullptr;
+			this->_arr = NULL;
 			this->_size = 0;
 			clone_arr(src);
 			std::cout << "[ copy constructor            ] { Array } (_arr: " << this->_arr << ", _size: " << this->_size << ")" << std::endl;
