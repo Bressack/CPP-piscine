@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/12 19:14:02 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/12 19:15:43 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,12 +219,6 @@ int		main(void)
 				std::cout << "error: " << e.what() << std::endl;
 			}
 		}
-	}
-	std::cout << std::endl << std::endl << std::endl;
-	{
-		Array<Array<int> > lol(10);
-
-		std::cout << lol << std::endl;
 	}
 	return (0);
 }
