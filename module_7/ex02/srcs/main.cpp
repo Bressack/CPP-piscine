@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 21:35:21 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/12 19:03:59 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/12 19:14:02 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -225,12 +225,6 @@ int		main(void)
 		Array<Array<int> > lol(10);
 
 		std::cout << lol << std::endl;
-	}
-	std::cout << std::endl << std::endl << std::endl;
-	{
-		Array<Array<Array<Array<int> > > > lolmdrptdr(10);
-
-		std::cout << lolmdrptdr << std::endl;
 	}
 	return (0);
 }
