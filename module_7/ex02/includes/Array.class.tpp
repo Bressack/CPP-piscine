@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:33:57 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/12 19:09:19 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/12 19:11:27 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ class Array
 		{
 			this->_arr = new T[size];
 			for (size_t i = 0; i < size; i++)
-				bzero(static_cast<void *>(&this->_arr[i]), sizeof(T));
+				memset(static_cast<void *>(&this->_arr[i]), 0, sizeof(T));
 			this->_size = size;
 			std::cout << "[ param constructor           ] { Array } (_arr: " << this->_arr << ", _size: " << this->_size << ")" << std::endl;
 		}
