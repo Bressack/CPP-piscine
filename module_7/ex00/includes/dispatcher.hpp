@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 15:00:46 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/12 10:58:59 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/12 19:07:06 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 # include <ctime>
 # include <cstdlib>
 # include <stdint.h>
+# include <climits>
 //!!CLASSES_INCLUDES
 template< typename T >
 void swap(T & a, T & b)
