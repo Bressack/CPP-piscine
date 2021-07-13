@@ -6,7 +6,7 @@
 #    By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/16 20:38:58 by tharchen          #+#    #+#              #
-#    Updated: 2021/07/13 12:04:26 by tharchen         ###   ########.fr        #
+#    Updated: 2021/07/11 11:40:06 by tharchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,17 @@ OBJS_DIR				=	objs/
 
 # !!SRCS_LIST_CLASSES
 
+SRCS_SPAN			=	\
+							Span/Span.class.cpp \
+							Span/Span.cd.class.cpp \
+							Span/Span.gs.class.cpp \
+							Span/Span.ovop.class.cpp \
+
 # !!SRCS_LIST_OTHERS
 
 SRCS_LIST				=	\
 							main.cpp \
+							$(SRCS_SPAN) \
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: tharchen <tharchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 22:44:01 by tharchen          #+#    #+#             */
-/*   Updated: 2021/07/13 11:42:49 by tharchen         ###   ########.fr       */
+/*   Updated: 2021/07/13 13:45:48 by tharchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ class NoMatchException: public std::exception
 {
 	public:
 		NoMatchException(void) {}
-		const char *what() const throw()
-		{
-			return ("no match found");
-		}
+		const char *what() const throw();
 };
 
 template<typename T>
